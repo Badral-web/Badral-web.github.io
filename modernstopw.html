@@ -1,0 +1,133 @@
+ <!DOCTYPE html>
+ <html>
+     <head>
+         <meta charset="utf-8">
+         <title>StopWatch</title>
+         <style>
+            body{
+                margin: 0;
+                padding: 0;
+            }
+            .container{
+                width: 500px;
+                height: 200px;
+                background-color: rgba(0,0,0,0.5);
+                margin: 100px auto 0 auto;
+                border-radius: 20px;
+            }
+            .container .display{
+                width: 58px;
+                height: 20px;
+                margin: 30px auto;
+                color: white;   
+            }
+            .container .second{
+                margin: 10px auto;
+                width: 142px;
+            }
+            .container .second button{
+                height: 30px;
+                border-radius: 10px;
+            }
+            .container2{
+                margin: 0 auto;
+                background-color: rgba(0,0,0,0.5);
+                width: 500px;
+                height: 500px;
+                border-radius: 20px;
+            }
+            .container2 .laps div{
+                background-color: red;
+                margin: 20px;
+                width: 200px;
+                height: 40px;
+                float: left;
+                border-radius: 20px;
+                font-size: 30px;
+                text-align: center;
+            }
+         </style>
+     </head>
+     <body>
+         <div class="container">
+            <div id="display" class="display">00:00:00</div><br>
+                <div class="second">
+                    <button onclick="toggleStart()" id="myButton1">Start</button>
+                    <button onclick="reset()">Reset</button>
+                    <button onclick="lap()" id="myLapButton" disabled>Lap</button><br>
+                </div>
+         </div>
+         <div class="container2">
+            <div id="laps" style="overflow:scroll; height:500px; width: 500px;" class="laps"></div>  
+         </div>
+         <script>
+            var display = document.getElementById("display");
+            var myButton1 = document.getElementById("myButton1");
+            var minutes = 0;
+            var seconds = 0;
+            var doli = 0;
+            var displayMinutes = 0;
+            var displaySeconds = 0;
+            var displayDoli = 0;
+            var toggle = true;
+            var myID;
+            var myLapButton = document.getElementById("myLapButton");
+            var lapNumber = 1;
+            var laps = document.querySelector("#laps")
+            function toggleStart(){
+                if(toggle){
+                    myID = setInterval(run, 10);
+                    myButton1.innerHTML = "Stop";
+                    myLapButton.disabled = false;
+                }
+                else{
+                    clearInterval(myID);
+                    myButton1.innerHTML = "Start";
+                    myLapButton.disabled = true;
+                }
+                toggle = !toggle;
+            }
+            function run(){
+                doli++;
+                if(doli == 100){
+                    seconds++;
+                    doli = 0;
+                }
+                if(seconds == 60){
+                    minutes++;
+                    seconds = 0;
+                }
+                /*if(doli > 9){
+                    displayDoli = "0";
+                }*/
+                if(seconds < 10){
+                    displaySeconds = "0";
+                }
+                if(minutes   < 10){
+                    displayMinutes = "0";
+                }
+                display.innerHTML = displayMinutes + minutes + ":" + displaySeconds + seconds + ":"+ doli;
+            }
+            function reset(){
+                lapNumber = 1;
+                display.innerHTML = "00:00:00";
+                minutes = 0;
+                seconds = 0;
+                doli = 0;
+                if(!toggle){
+                    toggleStart();
+                }
+                laps.innerHTML = "";
+            }
+            function lap(){
+                
+                var myLapNumber = document.createElement("div");
+                var myLapTime = document.createElement("div");
+                myLapNumber.innerHTML = "Дугаар №" + lapNumber;
+                myLapTime.innerHTML =  displayMinutes + minutes + ":" + displaySeconds + seconds + ":"+ doli;
+                laps.append(myLapNumber, myLapTime);
+                lapNumber++;
+            }
+        </script>
+     </body>
+ </html>
