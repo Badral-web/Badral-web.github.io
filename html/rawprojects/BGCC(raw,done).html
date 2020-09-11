@@ -25,11 +25,16 @@
             }
             function AddColor(){
                 let color = myinput.value;
-                colors.push(color)
+                colors.push(color);
                 myinput.value = "";
                 count = colors.length-1;
                 body.style.backgroundColor = colors[count];
+                if(body.style.backgroundColor !== colors[count]){
+                    alert("There is no color");
+                    count--;
+                }
             }
+            
         </script>
     </body>
 </html>

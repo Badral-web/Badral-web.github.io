@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>slide</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .myImageContainer{
+                width: 500px;
+                height: 500px;
+                overflow: hidden;
+                object-fit: cover;
+            }
+            .myImageContainer img{
+                width: auto;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="myImageContainer"><img id="myImgTag" onclick="togglePaused()"></div>
+        <script>
+            var myImages = ["../../img/126400.jpg",
+            "../../img/bell.jpg",
+            "../../img/berserk.jpg",
+            "../../img/bete.jpg",
+            "../../img/freya.jpg",
+            "../../img/guts.jpg",
+            "../../img/halloween.jpg",
+            "../../img/hell.jpg",
+            "../../img/hestia.jpg"];
+            var i = 0;
+            var myimgtag = document.getElementById("myImgTag");
+            var isPaused = false;
+            function togglePaused(){
+                if(!isPaused){
+                    clearInterval(myintervalID);
+                }
+                else{
+                    myintervalID = setInterval(myShow, 1000);
+                }
+                console.log(myintervalID);
+                isPaused = !isPaused;
+            }
+
+            function myShow(){
+                myimgtag.src = myImages[i];
+                i+=1;
+                if(i == myImages.length){
+                    i = 0;
+                }
+            }
+            var myintervalID = setInterval(myShow, 1000);
+        </script>
+    </body>
+</html>

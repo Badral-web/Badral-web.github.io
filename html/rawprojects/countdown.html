@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Countdown</title>
+        <meta charset="utf-8">
+        <style>
+            body{margin: 0; padding: 0;}
+            .mycountdownCont{
+                width: 300px;
+                height: 150px;
+                background-color: rgba(0, 0, 0, 0.4);
+                border-radius: 10px;
+                margin: 500px auto 0 auto;
+            }
+            .mycountdownCont input{
+                margin: 50px 0 0 30px;
+                padding: 0;
+                width: 50px;
+                height: 20px;
+                float: left;
+            }
+            .mycountdownCont p{
+                float: left;
+                margin: 50px 10px 0 20px;
+                padding: 0em;
+            }
+            .mycountdownCont button{
+                margin: 50px 0 0 20px;
+            }
+            .mycountdownCont div{
+                width: 100px;
+                margin: 20px auto 0 auto;
+                background-color: rgba(0, 0, 0, 0.7);
+                color: blanchedalmond;
+                text-align: center;
+                
+            }
+        </style>
+        <body>
+            <div class="mycountdownCont">
+                <input type="text" name="" id="myinput">
+                <p>seconds</p>
+                <button onclick="counting()" id="mybutton">Set timer</button>
+                <div id="container"></div>
+            </div>
+            <script>
+                let seconds;
+                let remseconds;
+                let minutes;
+                let container = document.getElementById("container");
+                let myinput = document.getElementById("myinput");
+                let myid;
+                /*var mybutton = document.getElementById("mybutton");*/
+                var disabled = document.createAttribute("disabled");
+                function Countdown(){
+                    
+                    if(seconds >= 0){
+                        remseconds = seconds % 60;
+                        minuts = Math.floor(seconds / 60);
+                        if(remseconds < 10){
+                            remseconds = "0" + remseconds;
+                        }
+
+                        if(minuts < 10){
+                            minuts = "0" + minuts;
+                        }
+
+                        container.innerHTML = minuts + " : " + remseconds;
+                        if(seconds == 0){
+                            container.innerHTML = "Done!"
+                        }
+                        seconds--;
+                        /*mybutton.setAttribute(disabled);*/
+                        document.getElementById("mybutton").setAttribute("disabled", true);
+                    }
+
+                    else{
+                        clearInterval(myid);
+                        container.style.visibility = "hidden";
+                        document.getElementById("mybutton").removeAttribute("disabled", true);
+                    }
+                }
+
+
+                function counting(){
+                    seconds = Number(myinput.value);
+                    container.style.visibility = "visible";
+                    if(myinput.value == ""){
+                        alert("Хоосон байна!")
+                    }
+                    else{
+                        myinput.value = "";
+                        myid = setInterval(Countdown, 1000);
+                    }
+                }
+            </script>
+        </body>
+    </head>
+</html>

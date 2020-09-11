@@ -8,35 +8,22 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"><!--FontAwesome-->
         <style>
-            .ProjectContainer{
-                width: 100%;
-                height: auto;     
+            body{
+                margin: 0;
+                padding: 0;
             }
-            .ProjectContainer button{
-                margin: 10px 20% 10px 20%;
+            .color-changer{
+            
             }
-            @media only screen and (max-width: 500px){
-                .ProjectContainer{
-                  display: flex;
-                  align-items: center;
-                  justify-items: center ;
-                  flex-direction: column;
-                }
-                .ProjectContainer .myP{
-                    font-size: 2vh;
-                    margin: 0 30% 3vh 30%;
-                }
-                .ProjectContainer .myButton{
-                  margin: 3vh 0 0 0;
-                  
-                  top: 50%;
-                  -ms-transform: translateY(-50%);
-                  transform: translateY(-50%);
-                }    
+            .color-changer input{
+                
+            }
+            .color-changer button{
+
             }
         </style>
     </head>
-    <body>
+    <body id="body">
         <!--Navi start-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <!--<a class="navbar-brand" href="#">Navbar</a>-->
@@ -83,20 +70,21 @@
 
           <div class="container">
             <div class="row" style="background-color: rgba(0,0,0,0.5);">
-              <div class="col-12" style="">
+              <div class="col-sm-12" style="">
                 <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png" class="img1">-->
-                <center><h2 style="color: black;" class="Ph2">Random string generator</h2><p style="font-size: 20px;">
-                  Үүнийг HTML,CSS,JS ашиглаж хийсэн.Голчлон JS-ийн random() function ашиглаж хийсэн.
+                <center><h2 style="color: black;" class="Ph2">Background-Color-Changer</h2><p style="font-size: 20px;">
+                  Үүнийг HTML,CSS,JS ашиглаж хийсэн.
                 </p></center>
-                <div class="col-sm-3 mx-auto">
-                    <div class="ProjectContainer mx-auto">
-                        <button onclick="randomgenerator()" class="myButton">Click me!!!</button>
-                        <p id="myP" class="myP">Энд random өгүүлбэр гарах болно.</p>
-                    </div>
-    
-                  </div>
               </div>
-              
+              <div class="col-12  d-flex flex-row justify-content-center">
+                <div class="color-changer">
+                    <input type="text" placeholder="Add colors" id="myinput">
+                    <button onclick="AddColor()">Add</button>
+                    <button onclick="Changer()" style="margin: 50px;"> 
+                        Change Color
+                    </button>
+                </div>    
+              </div>
               
             </div>
           </div>
@@ -141,17 +129,28 @@
           <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
           <script>
-              var myNames = ["Бадрал","Хөлөг","Болд","Анар","Бат","Орхон"];
-              var myNames = ["Бадрал","Хөлөг","Болд","Анар","Бат","Орхон"];
-            var myPlaces = ["Цайз хавиар","Urgoo-д","Тэнгис-д","Багшийн дээд хавиар","Сансарт","13т"];
-            var myActions = ["мөлхөж","алхаж","гүйж","хэвтэж","орилж","ном уншиж"];
-
-            function randomgenerator(){
-                var myrandonnames = myNames[Math.floor(Math.random() * myNames.length)];
-                var myrandomplaces = myPlaces[Math.floor(Math.random() * myPlaces.length)];
-                var myrandonactions = myActions[Math.floor(Math.random() * myActions.length)];
-                var myrandonstring = myrandonnames +" "+ myrandomplaces +" "+ myrandonactions + " байсан."
-                document.getElementById("myP").innerHTML = myrandonstring;
+              let body = document.getElementById("body");
+            let colors = ["black","red","green","blue","orange","azure"];
+            let count = 0;
+            let myinput = document.getElementById("myinput");
+            function Changer(){
+                body.style.backgroundColor = colors[count];
+                count+=1;
+                if(count == colors.length){
+                    count = 0;
+                }
+                console.log(count)
+            }
+            function AddColor(){
+                let color = myinput.value;
+                colors.push(color)
+                myinput.value = "";
+                count = colors.length-1;
+                body.style.backgroundColor = colors[count];
+                if(body.style.backgroundColor !== colors[count]){
+                    alert("Ийм өнгө байхгуй!");
+                    myinput.value = "";
+                }
             }
           </script>
     </body>
