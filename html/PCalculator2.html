@@ -30,6 +30,9 @@
             table input{
                 font-size: 40px;
             }
+            .my-footer{
+              margin-top:0px;
+            }
         }
         @media screen and (max-width: 900px) and (min-width: 400px){
             table{
@@ -38,13 +41,22 @@
             table input{
                 font-size: 60px;
             }
+            .my-footer{
+              margin-top: 0px;
+            }
         }
         @media only screen and (min-width: 900px){
             table{
-                width: 30vw;
+                width: 40vw;
             }
             table input{
                 font-size: 30px;
+            }
+            .my-footer{
+              left: 0;
+              right: 0;
+              bottom: 0;
+              position: fixed;
             }
         }
         </style>
@@ -139,7 +151,7 @@
           <!--Website footer Starts here!!!-->
 
 
-          <footer class="bg-dark text-white pt-5 pb-4">
+          <footer class="bg-dark text-white pt-5 pb-4 my-footer">
             <div class="container text-center text-md-left">
                 <div class="row text-center text-md-left">
                     <div class="col-md-7 col-lg-8">
@@ -201,6 +213,22 @@
              if(myinput.value[0] == '/'){
                 alert("Та эхлээд тоо оруулна уу.");
                 myinput.value = '';
+             }
+             if(myinput.value[myinput.value.length-1]=="*" && myinput.value[myinput.value.length-2]=="*"){
+               alert("Боломжгүй!");
+               myinput.value = "";
+             }
+             if(myinput.value[myinput.value.length-1]=="-" && myinput.value[myinput.value.length-2]=="-"){
+               alert("Боломжгүй!");
+               myinput.value = "";
+             }
+             if(myinput.value[myinput.value.length-1]=="/" && myinput.value[myinput.value.length-2]=="/"){
+               alert("Боломжгүй!");
+               myinput.value = "";
+             }
+             if(myinput.value[myinput.value.length-1]=="+" && myinput.value[myinput.value.length-2]=="+"){
+               alert("Боломжгүй!");
+               myinput.value = "";
              }
         } 
          function solve() 
