@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Portfolio</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/MainTemp.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"><!--FontAwesome-->
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+            }
+            .myClientContainer{
+                width: 100%;
+                height: auto;
+                background-color: rgba(0, 0, 0, 0.5);
+                
+                
+            }
+            .myClientContainer label{
+                
+            }
+            .myClientContainer input{
+                
+            }
+            .myClientContainer button{
+                
+                float: left;
+            }
+            .myP{
+              color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <!--Navi start-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!--<a class="navbar-brand" href="#">Navbar</a>-->
+            <center><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon" style="font-size: 2vh;"></span><!--Navbar Toggler icon-->
+              </button>
+            </center>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size: 2vh;"><!--Font--> 
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Portfolio site гэж юу вэ?</a>
+                </li>
+                
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    About
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="font-size: 2vh;"><!--Font-->
+                    <a class="dropdown-item" href="Badral.html">B.Badral</a>
+                    <a class="dropdown-item" href="https://www.facebook.com/india.university/" target="_blank">Indra Institute</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Холбогдох</a>
+                  </div>
+                </li>
+
+
+                
+                <!--Extra one-->
+                <!--<li class="nav-item">
+                  <a class="nav-link" href="#"></a>
+                </li>-->
+              </ul>
+              <!--<form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>-->
+            </div>
+          </nav>
+          <!--Navi end-->
+
+          <div class="container">
+            <div class="row" style="background-color: rgba(0,0,0,0.5);">
+              <div class="col-sm-12" style="">
+                <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png" class="img1">-->
+                <center><h2 style="color: black;" class="Ph2">Энэ бол Local орчинд хийсэн Login client.</h2><p style="font-size: 20px;">
+                  Үүнийг HTML,CSS,JS ашиглаж хийсэн.
+                </p></center>
+              </div>
+              <div class="col-xl-4 justify-content-sm-center">
+                <div class="myClientContainer">
+                    <label for="uname" id="userlabel">Username:</label>
+                    <input type="text" id="uname" name="uname"><br><br>
+                    <label for="pword" id="passlabel">Password:</label>
+                    <input type="password" id="pword" name="pword"><br><br>
+                    <button onclick="submit()" id="usersub">Submit</button>
+                    <button onclick="logout()">Log out</button><br>
+                    <P id="myP" style="visibility: hidden;">Welcome!!!</P>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
+          <!--Website footer Starts here!!!-->
+
+
+          <footer class="bg-dark text-white pt-5 pb-4 fixed-bottom">
+            <div class="container text-center text-md-left">
+                <div class="row text-center text-md-left">
+                    <div class="col-md-7 col-lg-8">
+                      <p style="font-size: 2vh;">@Indra Institute 2020 by:
+                        <a href="Badral.html" style="text-decoration: none;">
+                          <strong class="text-warning">Б.Бадрал</strong>
+                        </a></p>
+                    </div>
+                    <div class="col-md-5 col-lg-4">
+                      <div class="text-center text-md-right">
+                        <ul class="list-unstyled list-inline">
+                          <li class="list-inline-item">
+                            <a href="https://www.facebook.com/gangorca963/" target="_blank" class="btn-flaoting btn-sm text-white" style="font-size: 2vh;"><i class="fab fa-facebook"></i></a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a href="#" class="btn-flaoting btn-sm text-white" style="font-size: 2vh;"><i class="fab fa-twitter"></i></a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a href="#" class="btn-flaoting btn-sm text-white" style="font-size: 2vh;"><i class="fab fa-instagram"></i></a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a href="#" class="btn-flaoting btn-sm text-white" style="font-size: 2vh;"><i class="fab fa-youtube"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+          <script>
+              var count = 0;
+                function submit(){
+                    count+=1;
+                    var username = document.getElementById("uname").value;
+                    var password = document.getElementById("pword").value;
+                    if(username == "admin" && password == "adminpass"){
+                        alert("Та амжилттай нэвтэрлээ.");
+                        document.getElementById("uname").value = null;
+                        document.getElementById("pword").value = null;
+                        document.getElementById("myP").style.visibility = "visible";
+                        document.getElementById("userlabel").style.visibility = "hidden";
+                        document.getElementById("passlabel").style.visibility = "hidden";
+                        document.getElementById("usersub").style.visibility = "hidden";
+                        document.getElementById("uname").style.visibility = "hidden";
+                        document.getElementById("pword").style.visibility = "hidden";
+                    }
+                    else if(username == "" && password == ""){
+                        alert("Хоосон байна.");
+                        count-=1;
+                    }
+                    else if(username == null && password == null){
+                        alert("Хоосон байна.");
+                    }
+
+
+
+                    else if(username == "admin" && password == ""){
+                        alert("Таны password хоосон байна.");
+                        count-=1;//энэ нь logout function ажиллах үед хэрэг болно.
+                        document.getElementById("uname").value = null;
+                        document.getElementById("pword").value = null;
+                    }
+                    else if(username == "" && password !== ""){
+                        alert("Таны username хэсэг хоосон байна.");
+                        count-=1;//энэ нь logout function ажиллах үед хэрэг болно.
+                        document.getElementById("uname").value = null;
+                        document.getElementById("pword").value = null;
+                    }
+                    else if(username !== "admin" && password !== "adminpass"){
+                        alert("username болон password буру байна.");
+                        count-=1;//энэ нь logout function ажиллах үед хэрэг болно.
+                        document.getElementById("uname").value = null;
+                        document.getElementById("pword").value = null;
+                    }
+                    else if(username !== "admin" && password == "adminpass"){
+                        alert("Таны username буруу байна.");
+                        count-=1
+                        document.getElementById("uname").value = null;
+                        document.getElementById("pword").value = null;
+                    }
+                    else if(username == "admin" && password !== "adminpass"){
+                        alert("Таны password буруу байна!");
+                        count-=1
+                        //document.getElementById("uname").value = null;
+                        document.getElementById("pword").value = null;
+                    }
+                    else if(username == "" && password == ""){
+                        alert("Хоосон байна.");
+                        count-=1;
+                    }
+                    else if(username == null && password == null){
+                        alert("Хоосон байна.");
+                    }
+                }
+                function logout(){
+                    count-=1;
+                    if(count == -1){
+                        alert("Та username,password оо хийгээгүй байна.");
+                        count+=1;
+                        document.getElementById("uname").value = null;
+                        document.getElementById("pword").value = null;
+                    }
+                    else if(count == 0){
+                        alert("Та амжилттай гарлаа.");
+                        document.getElementById("uname").value = null;
+                        document.getElementById("pword").value = null;
+                        document.getElementById("myP").style.visibility = "hidden";
+                        document.getElementById("myP").style.visibility = "hidden";
+                        document.getElementById("userlabel").style.visibility = "visible";
+                        document.getElementById("passlabel").style.visibility = "visible";
+                        document.getElementById("usersub").style.visibility = "visible";
+                        document.getElementById("uname").style.visibility = "visible";
+                        document.getElementById("pword").style.visibility = "visible";
+                    }
+                }
+          </script>
+    </body>
+</html>

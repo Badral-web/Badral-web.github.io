@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Portfolio</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"><!--FontAwesome-->
+        <link rel="stylesheet" href="../css/MainTemp.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <style>
+            /*body{
+              background: url(https://wallup.net/wp-content/uploads/2017/03/29/476208-code-web_development-JavaScript-Computer_screen-pixels-programming-PHP-syntax_highlighting-programming_language-HTML.jpg);
+              background-attachment: fixed;
+              background-repeat: no-repeat;
+              background-size: cover;
+            }*/
+        </style>
+        <style>
+          
+          body{
+            position: relative;
+            height: 100%;
+            background: url(../img/development.jpg);
+            /*background: url(https://wallup.net/wp-content/uploads/2017/03/29/476208-code-web_development-JavaScript-Computer_screen-pixels-programming-PHP-syntax_highlighting-programming_language-HTML.jpg);*/
+              background-attachment: fixed;
+              background-repeat: no-repeat;
+              background-size: cover;
+              /*background-color: #fff;*/
+          }
+      
+          /*body{
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+          }*/
+      
+          .swiper-container {
+            width: 100%;
+            height: 50%;
+            margin: 100px 0 0 0;
+          }
+      
+          .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+      
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+          }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!--<a class="navbar-brand" href="#">Navbar</a>-->
+            <center><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon" style="font-size: 2vh;"></span><!--Navbar Toggler icon-->
+              </button>
+            </center>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size: 2vh;"><!--Font-->
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="PortfolioInfo.html">Portfolio site гэж юу вэ?</a>
+                </li>
+                
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    About
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="font-size: 2vh;"><!--Font-->
+                    <a class="dropdown-item" href="Badral.html">B.Badral</a>
+                    <a class="dropdown-item" href="https://www.facebook.com/india.university/" target="_blank">Indra Institute</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Холбогдох</a>
+                  </div>
+                </li>
+
+
+                <!--<li class="nav-item">
+                  <a class="nav-link" href="#">My JS Projects</a>
+                </li>-->
+                <!--<li class="nav-item">
+                  <a class="nav-link" href="#"></a>
+                </li>-->
+              </ul>
+              <!--<form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="height: 3vw;">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="height: 3vw;">Search</button>
+              </form>-->
+            </div>
+        </nav>
+
+        <div class="container" style="background-color: rgba(0,0,0,0.5); margin-bottom: 100px;">
+            <div class="row" style="margin-top: -50px; margin-bottom: 100px;">
+
+              <div class="col-sm-4" style="">
+                <a href="Ptodolist.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png" class="img1"></a>
+                <center><h2 style="color: white;">ToDo List using HTML,CSS,JS</h2></center>
+              </div>
+              <div class="col-sm-4" style="">
+                <a href="PGifSearcher.html"><img src="https://i.pinimg.com/originals/1c/74/fb/1c74fb87745ae97377eb914e610672c4.gif" class="img1"></a>
+                <center><h2 style="color: white;">Giphy API ашиглаж хийсэн Gif searcher</h2></center>
+              </div>
+              <div class="col-sm-4" style="">
+                <a href="PLoginClient.html"><img src="https://miro.medium.com/max/900/1*q99J7XLYVWgOt69E8IuXqw.gif" class="img1"></a>
+                <center><h2 style="color: white;">Энэ бол Local орчинд хийсэн Login Client</h2></center>
+              </div>
+
+              <div class="col-sm-4" style="">
+                <a href="PBackGroundCC.html"><img src="https://media1.giphy.com/media/WrHrrwqxCTTb7uKQQX/200.gif" class="img1"></a>
+                <center><h2 style="color: white;">Энэ бол background-color changer юм.</h2></center>
+              </div>
+              <div class="col-sm-4" style="z-index: 999;">
+                <a href="PLoginClient.html"><img src="https://media4.giphy.com/media/26BRqPg05olzXG1bi/giphy.gif" class="img1"></a>
+                <center><h2 style="color: white;">Энэ бол random string generator юм.</h2></center>
+              </div>
+              <div class="col-sm-4" style="">
+                <a href="PStopWatch.html"><img src="https://img.pngio.com/animated-gif-stopwatch-mkkr-design-stopwatch-gif-animation-clock-png-gif-550_550.gif" class="img1"></a>
+                <center><h2 style="color: white;">Энэ бол StopWatch юм.</h2></center>
+              </div>
+
+
+              <div class="col-sm-12" style="width: 100%; height: 70vh; margin-bottom: -30vh;">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div>
+                    <div class="swiper-slide">Slide 10</div>
+                  </div>
+                  <!-- Add Arrows -->
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+              </div>
+
+
+              <div class="col-xl-4" style="">
+                <a href="PSlideShow.html"><img src="https://media3.giphy.com/media/ln7z2eWriiQAllfVcn/source.gif" class="img1"></a>
+                <center><h2 style="color: white;">Slide Show</h2></center>
+              </div>
+              <div class="col-xl-4" style="">
+                <a href="PDivVis.html"><img src="https://media3.giphy.com/media/ln7z2eWriiQAllfVcn/source.gif" class="img1"></a>
+                <center><h2 style="color: white;">Div visiblity</h2></center>
+              </div>
+              <div class="col-xl-4" style="">
+                <a href="PCalculator.html"><img src="https://media3.giphy.com/media/ln7z2eWriiQAllfVcn/source.gif" class="img1"></a>
+                <center><h2 style="color: white;">Simple Calculator</h2></center>
+              </div>
+              <div class="col-xl-4" style="">
+                <a href="PCountDown.html"><img src="https://i.pinimg.com/originals/54/fa/ea/54faead5cbba275917c823ee49cf4d13.gif" class="img1"></a>
+                <center><h2 style="color: white;">Countdown</h2></center>
+              </div>
+            </div>
+            <!--<div class="row">
+              <div class="col-sm-3" style="">
+                <img src="img/bete.jpg" class="rounded float-left" alt="...">
+              </div> 
+              <div class="col-sm-3" style="">
+                <img src="img/bete.jpg" class="rounded float-left" alt="...">
+              </div> 
+              <div class="col-sm-3" style="">
+                <img src="img/bete.jpg" class="rounded float-left" alt="...">
+              </div>
+              <div class="col-sm-3" style="">
+                <img src="img/bete.jpg" class="rounded float-left" alt="...">
+              </div>   
+            </div>-->
+          </div>
+          
+          <!--<div class="footer_container">
+            <ul class="footer-menu left">
+              <li><a href="Badral.html">Миний тухай</a></li>
+              <li><a onclick="alert('80303458')">Холбогдох дугаар</a></li>
+              
+            </ul>
+            <a class="Law right">@Indra Institute 2020</a>
+            <div class="dood-logo right">
+              <a href="#"><img src="img/logo.png"></a>
+            </div>
+            <div class="clr"></div>
+          </div>-->
+          <!--Website footer Starts here!!!-->
+
+
+          <footer class="bg-dark text-white pt-5 pb-4 ">
+              <div class="container text-center text-md-left">
+                  <div class="row text-center text-md-left">
+                      <div class="col-md-7 col-lg-8">
+                        <p style="font-size: 2vh;">@Indra Institute 2020 by:
+                          <a href="Badral.html" style="text-decoration: none;">
+                            <strong class="text-warning">Б.Бадрал</strong>
+                          </a></p>
+                      </div>
+                      <div class="col-md-5 col-lg-4">
+                        <div class="text-center text-md-right">
+                          <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                              <a href="https://www.facebook.com/gangorca963/" target="_blank" class="btn-flaoting btn-sm text-white" style="font-size: 2vh;"><i class="fab fa-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                              <a href="#" class="btn-flaoting btn-sm text-white" style="font-size: 2vh;"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                              <a href="#" class="btn-flaoting btn-sm text-white" style="font-size: 2vh;"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                              <a href="#" class="btn-flaoting btn-sm text-white" style="font-size: 2vh;"><i class="fab fa-youtube"></i></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </footer>
+          
+
+
+
+
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+          <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+          <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+          <script>
+            var swiper = new Swiper('.swiper-container', {
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+            });
+          </script>
+    </body>
+</html>

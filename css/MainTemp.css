@@ -1,0 +1,100 @@
+.img1{
+    width: 100%;
+    height: auto;
+    margin: 100px auto 10px auto;
+
+}
+.imgPort{
+    margin: 10px 0 10px 0;
+    width: 100%;
+}
+.footer_container{
+    width: 100%;
+    height: 10vh;
+    
+    background-color: #fff;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.clr{
+    clear: both;
+}
+.row{
+    z-index: -1;
+}
+
+.footer_container .dood-logo{}
+.footer_container .dood-logo img{
+    height: 60px;
+    margin: 30px;
+}
+.footer_container .footer-menu{
+	text-align: center;
+    padding: 14px 10px;
+}
+
+.footer_container .footer-menu  li{
+	display: inline-block;
+}
+.footer_container .footer-menu  li a{
+	color: #ffffff;
+    font-size: 15px;
+    padding: 0 5px;
+    border-right: 1px solid #e1e1e1;
+	font-family: sans-serif;
+	text-transform: uppercase;
+}
+.Law{
+    padding: 14px 0;
+    margin-right: 100px;
+    margin-top: 30px;
+}
+.Ph2{
+    margin-top: 5vh;
+}
+.container_project{
+    margin: 100px auto 200px auto;
+    width: 500px;
+    height: 700px;
+    background-color: aqua;
+}
+.container_project .addbut{
+    margin: 0;
+    padding: 0;
+    width: 204px;
+    height: 200px;
+    float: right;
+}
+.container_project input{
+    margin: 0;
+    padding: 0;
+    width: 296px;
+    height: 200px;
+}
+.container_project .container2_project{
+    overflow: scroll;
+    width: auto;
+    height: 500px;
+}
+.container_project .container2_project button{
+    float: left;
+    margin: 10px 0 0 0;
+    padding: 0;
+    width: 100px;
+    height: 50px;
+}
+.container_project .container2_project div{
+    float: left;
+    margin: 10px 0 0 0;
+    padding: 0;
+    width: 383px;
+    height: 50px;
+    background-color: red;
+}
+.container_project .container2_project div p{
+    margin: 10px 0 10px 0;
+}
